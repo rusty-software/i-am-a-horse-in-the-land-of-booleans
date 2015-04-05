@@ -10,7 +10,9 @@
     x))
 
 (defn divides? [divisor n]
-  ":(")
+  (if (= 0 divisor)
+    (throw (IllegalArgumentException. "0 is not a valid divisor!"))
+    (= 0 (mod n divisor))))
 
 (defn fizzbuzz [n]
   ":(")
