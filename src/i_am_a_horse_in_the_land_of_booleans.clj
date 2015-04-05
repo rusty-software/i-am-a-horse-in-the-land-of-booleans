@@ -28,7 +28,15 @@
   ":(")
 
 (defn generic-doublificate [x]
-  ":(")
+  "Trying not to use anything that hasn't been covered (let, seq), but couldn't resist 'or'.  Fragile implementation otherwise."
+  (cond
+    (number? x) (* 2 x)
+    (or (vector? x) (list? x))
+    (if (empty? x)
+      nil
+      (* 2 (count x)))
+    (empty? x) nil
+    :else true))
 
 (defn leap-year? [year]
   ":(")
