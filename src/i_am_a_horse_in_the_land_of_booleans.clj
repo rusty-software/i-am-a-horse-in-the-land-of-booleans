@@ -5,7 +5,9 @@
   (not (or (nil? x) (false? x))))
 
 (defn abs [x]
-  ":(")
+  (if (> 0 x)
+    (* -1 x)
+    x))
 
 (defn divides? [divisor n]
   ":(")
